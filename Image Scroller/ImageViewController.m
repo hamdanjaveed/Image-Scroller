@@ -50,6 +50,11 @@
     [self resetImage];
 }
 
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    // we want to zoom into the image view
+    return self.imageView;
+}
+
 // ---------- Getters and Setters ---------- //
 
 - (UIImageView *)imageView {
@@ -67,6 +72,17 @@
     
     // whenever the image URL is changed, reset the image
     [self resetImage];
+}
+
+- (void)setScrollView:(UIScrollView *)scrollView {
+    _scrollView = scrollView;
+    
+    // set the minumum and maximum zoom scale
+    _scrollView.minimumZoomScale = 0.5;
+    _scrollView.maximumZoomScale = 2.0;
+    
+    // set ourselves as the delegate
+    _scrollView.delegate = self;
 }
 
 @end
