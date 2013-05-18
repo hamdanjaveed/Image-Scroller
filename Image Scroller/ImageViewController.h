@@ -10,4 +10,7 @@
 
 @interface ImageViewController : UIViewController
 
+// the image url (can be local or remote)
+@property (strong, nonatomic) NSURL *imageURL;
+
 @end
