@@ -18,6 +18,7 @@
 		ACF9173F1748179C00A2D1D9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF9173E1748179C00A2D1D9 /* Default-568h@2x.png */; };
 		ACF917421748179C00A2D1D9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF917401748179C00A2D1D9 /* MainStoryboard.storyboard */; };
 		ACF917451748179C00A2D1D9 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF917441748179C00A2D1D9 /* ImageViewController.m */; };
+		ACF9174D174821C900A2D1D9 /* SpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF9174C174821C900A2D1D9 /* SpaceImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		ACF917411748179C00A2D1D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		ACF917431748179C00A2D1D9 /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		ACF917441748179C00A2D1D9 /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		ACF9174B174821C900A2D1D9 /* SpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceImageViewController.h; sourceTree = "<group>"; };
+		ACF9174C174821C900A2D1D9 /* SpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				ACF917401748179C00A2D1D9 /* MainStoryboard.storyboard */,
 				ACF917431748179C00A2D1D9 /* ImageViewController.h */,
 				ACF917441748179C00A2D1D9 /* ImageViewController.m */,
+				ACF9174B174821C900A2D1D9 /* SpaceImageViewController.h */,
+				ACF9174C174821C900A2D1D9 /* SpaceImageViewController.m */,
 				ACF9172F1748179C00A2D1D9 /* Supporting Files */,
 			);
 			path = "Image Scroller";
@@ -177,6 +182,7 @@
 				ACF917351748179C00A2D1D9 /* main.m in Sources */,
 				ACF917391748179C00A2D1D9 /* ImageAppDelegate.m in Sources */,
 				ACF917451748179C00A2D1D9 /* ImageViewController.m in Sources */,
+				ACF9174D174821C900A2D1D9 /* SpaceImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
