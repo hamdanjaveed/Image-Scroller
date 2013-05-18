@@ -9,8 +9,6 @@
 #import "ImageViewController.h"
 
 @interface ImageViewController () <UIScrollViewDelegate>
-// the image url (can be local or remote)
-@property (strong, nonatomic) NSURL *imageURL;
 // the scroll view in which the image is displayed
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 // the image view that holds the image
@@ -23,26 +21,46 @@
 
 // resets the image and scroll views
 - (void)resetImage {
-    // get the image and initialize the image view
-    NSData *imageData = [NSData dataWithContentsOfURL:self.imageURL];
-    UIImage *image = [UIImage imageWithData:imageData];
-    self.imageView = [[UIImageView alloc] initWithImage:image];
-    
-    // set the scroll view's content size to match the image
-    self.scrollView.contentSize = image.size;
-    
-    // add the image view too the scroll view
-    [self.scrollView addSubview:self.imageView];
+    if (self.scrollView) {
+        // reset the scroll and image views
+        self.scrollView.contentSize = CGSizeZero;
+        self.imageView.image = nil;
+        
+        // get the image and initialize the image view
+        NSData *imageData = [NSData dataWithContentsOfURL:self.imageURL];
+        UIImage *image = [UIImage imageWithData:imageData];
+        if (image) {
+            // setup the image view
+            self.imageView.image = image;
+            self.imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+            
+            // set the scroll view's content size to match the image
+            self.scrollView.contentSize = image.size;
+        }
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // add the image view to the scroll view
+    [self.scrollView addSubview:self.imageView];
     
     // when the view loads, reset the image
     [self resetImage];
 }
 
 // ---------- Getters and Setters ---------- //
+
+- (UIImageView *)imageView {
+    // if the _imageView has not been initialized
+    if (!_imageView) {
+        // initialize it with a frame of CGRectZero, since we do not know
+        // how big the image that it will hold is yet
+        _imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    }
+    return _imageView;
+}
 
 - (void)setImageURL:(NSURL *)imageURL {
     _imageURL = imageURL;
