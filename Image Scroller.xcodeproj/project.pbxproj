@@ -83,8 +83,6 @@
 		ACF9172E1748179C00A2D1D9 /* Image Scroller */ = {
 			isa = PBXGroup;
 			children = (
-				ACF917371748179C00A2D1D9 /* ImageAppDelegate.h */,
-				ACF917381748179C00A2D1D9 /* ImageAppDelegate.m */,
 				ACF917401748179C00A2D1D9 /* MainStoryboard.storyboard */,
 				ACF917431748179C00A2D1D9 /* ImageViewController.h */,
 				ACF917441748179C00A2D1D9 /* ImageViewController.m */,
@@ -96,6 +94,8 @@
 		ACF9172F1748179C00A2D1D9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ACF917371748179C00A2D1D9 /* ImageAppDelegate.h */,
+				ACF917381748179C00A2D1D9 /* ImageAppDelegate.m */,
 				ACF917301748179C00A2D1D9 /* Image Scroller-Info.plist */,
 				ACF917311748179C00A2D1D9 /* InfoPlist.strings */,
 				ACF917341748179C00A2D1D9 /* main.m */,
