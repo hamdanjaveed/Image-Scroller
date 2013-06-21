@@ -305,6 +305,7 @@
 				ACF9174A1748179C00A2D1D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
